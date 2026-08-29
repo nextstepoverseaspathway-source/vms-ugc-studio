@@ -431,6 +431,71 @@
       </div>
     </div>
   `).join('');
+    // ---------- VIDEO TEASER MODAL ----------
+  const teaserModal = document.createElement('div');
+  teaserModal.id = 'teaser-modal';
+  teaserModal.style.cssText = `
+    display:none;
+    position:fixed;
+    inset:0;
+    z-index:9999;
+    background:rgba(0,0,0,0.82);
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+  `;
+
+  teaserModal.innerHTML = `
+    <div style="position:relative;width:100%;max-width:900px;aspect-ratio:16/9;background:#000;border-radius:14px;overflow:hidden;">
+      <button id="teaser-close"
+        style="position:absolute;right:8px;top:8px;z-index:2;width:36px;height:36px;border:0;border-radius:50%;background:rgba(255,255,255,0.9);font-size:24px;line-height:1;cursor:pointer;">
+        ×
+      </button>
+      <iframe id="teaser-frame"
+        style="width:100%;height:100%;border:0;"
+        allow="autoplay; encrypted-media; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+  `;
+
+  document.body.appendChild(teaserModal);
+
+  function getYouTubeId(url) {
+    const match = url.match(
+      /(?:youtu\.be\/|youtube\.com\/(?:shorts\/|watch\?v=|embed\/))([^?&/]+)/
+    );
+    return match ? match[1] : null;
+  }
+
+  document.querySelectorAll('.thumb > a').forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+
+      const videoId = getYouTubeId(this.href);
+      if (!videoId) return;
+
+      document.getElementById('teaser-frame').src =
+        'https://www.youtube.com/embed/' + videoId + '?autoplay=1';
+
+      teaserModal.style.display = 'flex';
+    });
+  });
+
+  function closeTeaser() {
+    teaserModal.style.display = 'none';
+    document.getElementById('teaser-frame').src = '';
+  }
+
+  document.getElementById('teaser-close').addEventListener('click', closeTeaser);
+
+  teaserModal.addEventListener('click', function(e) {
+    if (e.target === teaserModal) closeTeaser();
+  });
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeTeaser();
+  });
 </script>
 
 </body>
