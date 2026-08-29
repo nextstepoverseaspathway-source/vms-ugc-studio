@@ -311,7 +311,7 @@
       <a href="#work" class="btn btn-primary">Watch My Reviews</a>
     </div>
     <div class="portrait-frame">
-      <img src="assets/hero_portrait.png" alt="Vaishali, founder of VMS UGC Studio">
+      <img src="assets/hero_portrait.jpg" alt="Vaishali, founder of VMS UGC Studio">
     </div>
   </div>
 </section>
@@ -327,7 +327,7 @@
 
     <div class="gallery-grid" id="gallery-grid"><!-- PRODUCT_CARDS --></div>
 
-    <p class="gallery-note">Each thumbnail is a placeholder for your UGC video clip — swap the image and enable the "Watch Full Review" link once your YouTube channel is live.</p>
+    <p class="gallery-note">Tap "Watch Full Review" on any product to view the full video on YouTube.</p>
   </div>
 </section>
 
@@ -335,7 +335,7 @@
 <section id="about">
   <div class="wrap about-grid">
     <div class="about-frame" style="overflow:hidden; padding:0;">
-      <img src="assets/about_portrait.png" alt="Vaishali, creator at VMS UGC Studio" style="width:100%; height:100%; object-fit:cover;">
+      <img src="assets/about_portrait.jpg" alt="Vaishali, creator at VMS UGC Studio" style="width:100%; height:100%; object-fit:cover;">
     </div>
     <div class="about-copy">
       <p class="eyebrow">About Me</p>
@@ -378,7 +378,7 @@
       <h2>Work With Me</h2>
       <p class="lede">Looking for authentic UGC content featuring a relatable 50+ creator? I'd love to work with your brand.</p>
       <div class="contact-row">
-        <a href="https://wa.me/919404484906" target="_blank" class="contact-chip">💬&nbsp; <div><strong>WhatsApp</strong><small>+91 94044 84906</small></div></a>
+        <a href="https://wa.me/919225607305" target="_blank" class="contact-chip">💬&nbsp; <div><strong>WhatsApp</strong><small>+91 92256 07305</small></div></a>
         <a href="mailto:magarvaishali16@gmail.com" class="contact-chip">✉️&nbsp; <div><strong>Email</strong><small>magarvaishali16@gmail.com</small></div></a>
         <a href="https://instagram.com/vms.ugc.studio" target="_blank" class="contact-chip">📩&nbsp; <div><strong>Instagram DM</strong><small>@vms.ugc.studio</small></div></a>
       </div>
@@ -397,20 +397,21 @@
 
 <script>
   const products = [
-    { name: "Sugar Pop Beetroot Tint & Lipstick", img: "assets/sugarpop.png" },
-    { name: "Flicka Silk Touch Primer", img: "assets/flicka_silktouch.png" },
-    { name: "Renee Browfill Pen", img: "assets/renee_browfill.png" },
-    { name: "Hoop Magnesium Body Lotion", img: "assets/hoop_magnesium.png" },
-    { name: "Hyphen Golden Hour Glow Serum", img: "assets/hyphen_glowserum.png" },
-    { name: "Pilgrim 24K Gold Serum", img: "assets/pilgrim_24kgold.png" },
-    { name: "Livon Leave-On Hair Serum", img: "assets/livon.png" },
-    { name: "Clay Enzyme Scrub", img: "assets/clay_scrub.png" },
-    { name: "Aqua-Dew SPF 50", img: "assets/aquadew.png" },
-    { name: "Clensta Snail Mucin", img: "assets/clensta.png" },
-    { name: "Varaasa Saparnis Oil", img: "assets/varaasa.png" },
-    { name: "Renee Cover Up Powder", img: "assets/renee_coverup.png" },
-    { name: "Zudio Dry Shampoo", img: "assets/zudio_dryshampoo.png" },
-    { name: "Pilgrim White Lotus", img: "assets/pilgrim_whitelotus.png" }
+    { name: "Sugar Pop Beetroot Tint & Lipstick", img: "assets/sugarpop.png", link: "https://youtu.be/cuACajh4Vrw" },
+    { name: "Flicka Silk Touch Primer", img: "assets/flicka_silktouch.png", link: "https://youtube.com/shorts/B5XtrlQzxzg" },
+    { name: "Renee Browfill Pen", img: "assets/renee_browfill.png", link: "https://youtu.be/moEP_RbIOTE" },
+    { name: "Hoop Magnesium Body Lotion", img: "assets/hoop_magnesium.png", link: "https://youtube.com/shorts/-BglkMBOgKw" },
+    { name: "Hyphen Golden Hour Glow Serum", img: "assets/hyphen_glowserum.png", link: "https://youtube.com/shorts/xSSfBnvn_Es" },
+    { name: "Pilgrim 24K Gold Serum", img: "assets/pilgrim_24kgold.png", link: "https://youtube.com/shorts/OaOxaBC9OUI" },
+    { name: "Livon Leave-On Hair Serum", img: "assets/livon.png", link: "https://youtube.com/shorts/4m8ggBXeWck" },
+    { name: "Clay Enzyme Scrub", img: "assets/clay_scrub.png", link: "https://youtu.be/LcIW9YVMcjo" },
+    { name: "Aqua-Dew SPF 50", img: "assets/aquadew.png", link: "https://youtu.be/8disv1XtBG4" },
+    { name: "Clensta Snail Mucin", img: "assets/clensta.png", link: "https://youtu.be/d_GDJoN4-5A" },
+    { name: "Varaasa Saparnis Oil", img: "assets/varaasa.png", link: "https://youtu.be/YBl0a_CjYz4" },
+    { name: "Renee Cover Up Powder", img: "assets/renee_coverup.png", link: "https://youtu.be/kgjSguZbfWE" },
+    { name: "Zudio Dry Shampoo", img: "assets/zudio_dryshampoo.png", link: "https://youtu.be/nbfvjVZumSQ" },
+    { name: "Pilgrim White Lotus", img: "assets/pilgrim_whitelotus.png", link: "https://youtu.be/faT2tgTS3jw" },
+    { name: "Zudio Sugar & Spice Body Mist", img: "assets/zudio_sugarspice.png", link: "https://youtube.com/shorts/aIShbLSPmk0" }
   ];
 
   const playIcon = `<svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 2.5v11l10-5.5-10-5.5z" fill="#4C3244"/></svg>`;
@@ -426,7 +427,7 @@
       </div>
       <div class="card-body">
         <h3>${p.name}</h3>
-        <span class="watch-link">Watch Full Review ${arrowIcon}</span>
+        <a class="watch-link is-live" href="${p.link}" target="_blank" rel="noopener">Watch Full Review ${arrowIcon}</a>
       </div>
     </div>
   `).join('');
