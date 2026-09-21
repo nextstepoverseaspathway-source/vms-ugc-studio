@@ -245,38 +245,130 @@
 
   /* ---------- RECOMMENDED PRODUCTS ---------- */
   .rec-grid{
-    display:grid; grid-template-columns:repeat(4,1fr); gap:18px;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+}
+
+.rec-slot{
+  min-height:360px;
+  border-radius:18px;
+  border:1px solid var(--line);
+  background:var(--surface-2);
+  padding:18px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:flex-end;
+  text-align:center;
+  color:var(--ink);
+  box-shadow:0 6px 20px rgba(60,35,45,.08);
+  overflow:hidden;
+  position:relative;
+}
+
+.rec-slot::before{
+  content:"";
+  width:100%;
+  height:210px;
+  border-radius:14px;
+  margin-bottom:18px;
+  background:linear-gradient(135deg,#f5e6dc,#ead5cc);
+  display:block;
+}
+
+.rec-slot:nth-child(1)::before{
+  content:"PEPPERFRY";
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family:Georgia,serif;
+  font-size:28px;
+  font-weight:bold;
+  color:#b43d27;
+}
+
+.rec-slot:nth-child(2)::before{
+  content:"plum";
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family:Georgia,serif;
+  font-size:38px;
+  font-weight:bold;
+  color:#63306f;
+  background:linear-gradient(135deg,#f9e1e2,#f1d4df);
+}
+
+.rec-slot:nth-child(3)::before{
+  content:"UDACITY";
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:28px;
+  font-weight:600;
+  letter-spacing:2px;
+  color:#252b70;
+  background:linear-gradient(135deg,#e8e7ef,#dcdde8);
+}
+
+.rec-slot:nth-child(4)::before{
+  content:"✦  More Favorites  ✦";
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family:Georgia,serif;
+  font-size:22px;
+  color:#8a6254;
+  background:linear-gradient(135deg,#f7eadb,#ecd7c5);
+}
+
+.rec-slot a{
+  display:block;
+  width:100%;
+  padding:13px 12px;
+  border-radius:30px;
+  background:#713e52;
+  color:#fff;
+  text-decoration:none;
+  font-weight:600;
+  font-size:15px;
+  transition:transform .2s ease, box-shadow .2s ease;
+}
+
+.rec-slot a:hover{
+  transform:translateY(-2px);
+  box-shadow:0 6px 16px rgba(60,35,45,.18);
+}
+
+.rec-slot:nth-child(4){
+  justify-content:flex-end;
+}
+
+.rec-slot:nth-child(4)::after{
+  content:"Stay tuned for more handpicked products I love and recommend.";
+  display:block;
+  margin:0 5px 18px;
+  color:var(--ink-soft);
+  font-size:14px;
+  line-height:1.5;
+}
+
+@media (max-width:900px){
+  .rec-grid{
+    grid-template-columns:repeat(2,1fr);
   }
-  <div class="rec-slot">
-  <a href="https://linksredirect.com/?cid=316417&source=linkkit&url=https%3A%2F%2Fwww.pepperfry.com%2F" target="_blank" rel="noopener">
-    🏠 Shop Pepperfry
-  </a>
-</div>
+}
 
-<div class="rec-slot">
-  <a href="https://linksredirect.com/?cid=316417&source=linkkit&url=https%3A%2F%2Fplumgoodness.com%2F" target="_blank" rel="noopener">
-    🌿 Shop Plum Goodness
-  </a>
-</div>
+@media (max-width:520px){
+  .rec-grid{
+    grid-template-columns:1fr;
+  }
 
-<div class="rec-slot">
-  <a href="https://linksredirect.com/?cid=316417&source=linkkit&url=https%3A%2F%2Fwww.udacity.com%2F" target="_blank" rel="noopener">
-    🎓 Explore Udacity
-  </a>
-</div>
-
-<div class="rec-slot">
-  More affiliate picks coming soon
-</div>
-  @media (max-width:900px){ .rec-grid{grid-template-columns:repeat(2,1fr);} }
-  @media (max-width:520px){ .rec-grid{grid-template-columns:1fr;} }
   .rec-slot{
-    aspect-ratio:3/4; border-radius:16px;
-    border:1.5px dashed var(--line);
-    display:flex; align-items:center; justify-content:center;
-    text-align:center; padding:18px; color:var(--ink-soft); font-size:0.85rem;
-    background:var(--surface-2);
+    min-height:330px;
   }
+}
 
   /* ---------- WORK WITH ME ---------- */
   .work-section{
